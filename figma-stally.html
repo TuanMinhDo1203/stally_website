@@ -31,42 +31,94 @@
     <script>
       (() => {
         const CONTACT_PHONE = "+84941205852";
-        const CONTACT_TEXT = ["liên hệ", "lien he", "contact", "gọi", "goi", "tư vấn", "tu van"];
+        const SITE = "website";
 
         const normalize = (value) =>
           String(value || "")
             .normalize("NFD")
             .replace(/[\u0300-\u036f]/g, "")
-            .toLowerCase();
+            .replace(/đ/g, "d")
+            .replace(/Đ/g, "d")
+            .toLowerCase()
+            .replace(/\s+/g, " ")
+            .trim();
 
-        const isContactTarget = (element) => {
-          const text = normalize(element?.innerText || element?.textContent || "");
-          return CONTACT_TEXT.some((keyword) => text.includes(normalize(keyword)));
+        const clickText = (element) => normalize(element?.innerText || element?.textContent || "");
+
+        const targetForWebsite = (text) => {
+          if (text.includes("trang chu") || text === "stally") return "home";
+          if (text.includes("ve stally") || text.includes("stally lam gi")) return "about";
+          if (text.includes("san pham") || text.includes("procurs") || text.includes("bang gia")) return "products";
+          if (text.includes("demo") || text.includes("lien he") || text.includes("tu van")) return "contact";
+          return "";
         };
 
-        const wireContactCalls = () => {
+        const targetForLanding = (text) => {
+          if (text.includes("van de")) return "van-de";
+          if (text.includes("giai phap")) return "giai-phap";
+          if (text.includes("tinh nang")) return "tinh-nang";
+          if (text.includes("cach hoat dong")) return "cach-hoat-dong";
+          if (text.includes("bang gia")) return "bang-gia";
+          if (text === "demo" || text.includes("dat lich demo")) return "demo";
+          if (text.includes("lien he") || text.includes("early access") || text.includes("dang ky") || text.includes("tham gia") || text.includes("dung thu")) return "lien-he";
+          return "";
+        };
+
+        const targetFromText = (text) => SITE === "landing" ? targetForLanding(text) : targetForWebsite(text);
+
+        const shouldCall = (text, inNavOrFooter) => {
+          if (inNavOrFooter) return false;
+          return text.includes("lien he tu van") || text.includes("tu van") || text === "lien he";
+        };
+
+        const scrollFrameTo = (frameDocument, id) => {
+          const target = frameDocument.getElementById(id);
+          if (!target) return false;
+          frameDocument.documentElement.style.scrollBehavior = "smooth";
+          frameDocument.documentElement.style.overflowY = "auto";
+          frameDocument.body.style.overflowY = "auto";
+          target.style.scrollMarginTop = "88px";
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+          return true;
+        };
+
+        const wireInteractions = () => {
           const iframe = document.querySelector("iframe");
           const frameDocument = iframe?.contentDocument;
-          if (!frameDocument || frameDocument.__stallyContactCallWired) return;
+          if (!frameDocument || frameDocument.__stallyInteractionsWired) return;
 
-          frameDocument.__stallyContactCallWired = true;
+          frameDocument.__stallyInteractionsWired = true;
           frameDocument.addEventListener(
             "click",
             (event) => {
               const path = event.composedPath ? event.composedPath() : [];
-              const target = path.find((node) => node?.nodeType === 1 && isContactTarget(node));
-              if (!target) return;
+              const clickable = path.find((node) =>
+                node?.nodeType === 1 && (node.tagName === "BUTTON" || node.tagName === "A")
+              );
+              if (!clickable) return;
 
-              event.preventDefault();
-              event.stopPropagation();
-              window.location.href = `tel:${CONTACT_PHONE}`;
+              const text = clickText(clickable);
+              const inNavOrFooter = Boolean(clickable.closest("nav, footer"));
+              const target = targetFromText(text);
+
+              if (shouldCall(text, inNavOrFooter)) {
+                event.preventDefault();
+                event.stopPropagation();
+                window.location.href = `tel:${CONTACT_PHONE}`;
+                return;
+              }
+
+              if (target && scrollFrameTo(frameDocument, target)) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
             },
             true
           );
         };
 
-        document.querySelector("iframe")?.addEventListener("load", wireContactCalls);
-        window.addEventListener("load", wireContactCalls);
+        document.querySelector("iframe")?.addEventListener("load", wireInteractions);
+        window.addEventListener("load", wireInteractions);
       })();
     </script>
   </body>
