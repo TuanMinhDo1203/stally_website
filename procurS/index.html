@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ProcurS by Stally - Hệ thống Thu mua & Cung ứng B2B</title>
+  <meta name="description" content="ProcurS là sản phẩm của Stally, hỗ trợ doanh nghiệp B2B tự động hóa và chuẩn hóa toàn bộ quy trình thu mua, báo giá, phê duyệt và theo dõi nhà cung cấp.">
+  
+  <!-- SEO OpenGraph -->
+  <meta property="og:title" content="ProcurS by Stally - Hệ thống Thu mua & Cung ứng B2B">
+  <meta property="og:description" content="ProcurS giúp doanh nghiệp B2B tự động hóa quy trình thu mua, từ yêu cầu báo giá đến so sánh nhà cung cấp và phê duyệt PO.">
+  <meta property="og:type" content="website">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/bold/style.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="logo">
+        <div class="logo-icon">P</div>
+        ProcurS by Stally
+      </a>
+      <ul class="nav-links">
+        <li><a href="#van-de">Điểm Đau</a></li>
+        <li><a href="#tinh-nang">Tính Năng</a></li>
+        <li><a href="#cach-hoat-dong">Quy Trình</a></li>
+        <li><a href="#demo">Trải Nghiệm</a></li>
+        <li><a href="#bang-gia">Bảng Giá</a></li>
+        <li><a href="#lien-he">Liên Hệ</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a href="#lien-he" class="btn btn-primary btn-sm">Đặt Lịch Demo</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content reveal">
+        <span class="hero-badge">Early Access Beta</span>
+        <h1 class="hero-title">Trợ lý AI tối ưu hóa quy trình thu mua cho <span>doanh nghiệp B2B</span></h1>
+        <p class="hero-subtitle">Tự động hóa luồng xử lý yêu cầu mua hàng, báo giá nhà cung cấp, phê duyệt PO và theo dõi giao nhận cho doanh nghiệp.</p>
+        <div class="hero-actions">
+          <a href="#lien-he" class="btn btn-primary">Tham Gia Early Access</a>
+          <a href="#demo" class="btn btn-secondary">Xem Demo Trực Tiếp</a>
+        </div>
+        <div class="hero-meta">
+          <div class="hero-meta-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Không cần thẻ tín dụng
+          </div>
+          <div class="hero-meta-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Dùng thử miễn phí 14 ngày
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="browser-mockup">
+          <div class="browser-header">
+            <div class="browser-dot"></div>
+            <div class="browser-dot"></div>
+            <div class="browser-dot"></div>
+            <div class="browser-address">stally.app/dashboard/intake</div>
+          </div>
+          <div class="browser-content">
+            <img src="assets/stally_hero_3d_promo.png" alt="Giao diện Dashboard Stally">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pain Points Section -->
+  <section id="van-de" class="bg-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Những điểm đau trong quy trình mua sắm B2B</h2>
+        <p>Quy trình mua sắm truyền thống chậm, thủ công và dễ sai sót. Stally giải quyết triệt để các vấn đề này bằng tự động hóa thông minh.</p>
+      </div>
+      
+      <div class="pain-grid five-items reveal">
+        <!-- Card 1 -->
+        <div class="pain-card">
+          <div class="micro-ui">
+            <i class="ph-bold ph-files"></i>
+          </div>
+          <h3>Báo giá lộn xộn nhiều định dạng</h3>
+          <p>Nhà cung cấp gửi báo giá dưới dạng PDF, email, Excel khác nhau - trích xuất thủ công rất tốn thời gian và công sức của nhân sự.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="pain-card">
+          <div class="micro-ui">
+            <i class="ph-bold ph-scales"></i>
+          </div>
+          <h3>So sánh nhà cung cấp thủ công</h3>
+          <p>So sánh giá, điều khoản chiết khấu và thời gian giao hàng từ nhiều nhà cung cấp đòi hỏi hàng giờ làm việc với các bảng tính spreadsheet phức tạp.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="pain-card">
+          <div class="micro-ui">
+            <i class="ph-bold ph-hourglass-medium"></i>
+          </div>
+          <h3>Tạo RFQ mất nhiều công sức</h3>
+          <p>Soạn thảo Yêu cầu Báo giá (RFQ) từ đầu cho mỗi đợt mua hàng làm chậm toàn bộ chu kỳ cung ứng vật tư và dịch vụ của doanh nghiệp.</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="pain-card">
+          <div class="micro-ui">
+            <i class="ph-bold ph-pencil-line"></i>
+          </div>
+          <h3>Khó soạn nội dung đàm phán</h3>
+          <p>Viết thư đàm phán giá chuyên nghiệp đòi hỏi nhiều kinh nghiệm và tiêu tốn thời gian quý báu của phòng thu mua.</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="pain-card">
+          <div class="micro-ui">
+            <i class="ph-bold ph-warning-octagon"></i>
+          </div>
+          <h3>Bỏ sót thông tin quan trọng</h3>
+          <p>Các điều khoản phụ, phí vận chuyển ẩn và thông số kỹ thuật thực phẩm thường bị bỏ qua khi nhân viên xem xét thủ công bằng mắt.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="tinh-nang">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Tính năng mạnh mẽ cho mua sắm hiện đại</h2>
+        <p>Mỗi tính năng được thiết kế để tiết kiệm thời gian, giảm thiểu công việc nhập liệu thủ công và tăng tính minh bạch trong quyết định mua hàng.</p>
+      </div>
+
+      <div class="features-grid reveal">
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="micro-ui">
+            <i class="ph-bold ph-magic-wand"></i>
+          </div>
+          <h3>Trích xuất báo giá bằng AI</h3>
+          <p>Tự động quét và trích xuất giá cả, điều khoản thanh toán, ngày giao hàng từ bất kỳ định dạng báo giá nào của nhà cung cấp.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <div class="micro-ui">
+            <i class="ph-bold ph-chart-bar-horizontal"></i>
+          </div>
+          <h3>So sánh nhà cung cấp</h3>
+          <p>Bảng so sánh chi phí đặt cạnh nhau trực quan giúp bạn dễ dàng xác định đối tác có mức giá và chất lượng tốt nhất nhanh chóng.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="micro-ui">
+            <i class="ph-bold ph-paper-plane-tilt"></i>
+          </div>
+          <h3>Tạo RFQ tự động</h3>
+          <p>Tạo Yêu cầu Báo giá (RFQ) chuẩn hóa gửi tới các đối tác cung ứng với đầy đủ thông số kỹ thuật được điền sẵn chỉ trong vài giây.</p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-card">
+          <div class="micro-ui">
+            <i class="ph-bold ph-clipboard-text"></i>
+          </div>
+          <h3>Soạn đề xuất mua hàng</h3>
+          <p>Tự động lập đề xuất trình duyệt PO (Purchase Order) với đầy đủ các trường thông tin bắt buộc, lịch sử thầu kèm theo.</p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="feature-card">
+          <div class="micro-ui">
+            <i class="ph-bold ph-robot"></i>
+          </div>
+          <h3>Trợ lý đàm phán AI</h3>
+          <p>AI tự động gợi ý thư đàm phán giá, các điều khoản thương thảo tối ưu dựa trên dữ liệu lịch sử và bối cảnh thị trường.</p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="feature-card">
+          <div class="micro-ui">
+            <i class="ph-bold ph-shield-check"></i>
+          </div>
+          <h3>Nhật ký kiểm toán & Tuân thủ</h3>
+          <p>Lưu trữ và theo dõi toàn bộ nhật ký phê duyệt đơn hàng, đảm bảo tính minh bạch, chống gian lận trong chuỗi cung ứng.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Target Audience Section -->
+  <section class="bg-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Phù hợp với mọi vai trò trong doanh nghiệp</h2>
+        <p>Stally cung cấp các giao diện nghiệp vụ chuyên biệt giúp từng bộ phận vận hành nhịp nhàng và hiệu quả.</p>
+      </div>
+
+      <div class="reveal">
+        <div class="audience-tabs">
+          <button class="tab-btn active" data-role="procurement">Nhân viên Mua sắm</button>
+          <button class="tab-btn" data-role="chef">Bộ phận Yêu cầu</button>
+          <button class="tab-btn" data-role="warehouse">Thủ Kho Trưởng</button>
+          <button class="tab-btn" data-role="ceo">Giám Đốc (CEO)</button>
+        </div>
+
+        <div class="audience-display">
+          <!-- Pane 1 -->
+          <div class="audience-pane active" id="pane-procurement">
+            <div class="audience-pane-content">
+              <span class="audience-tag">Procurement Staff</span>
+              <h3>Tối ưu hóa quy trình RFQ hằng ngày</h3>
+              <p>Phòng mua sắm có thể quản lý tập trung toàn bộ báo giá, tự động tổng hợp so sánh để gửi đề xuất PO nhanh hơn.</p>
+              <ul class="audience-list">
+                <li>Bảng Kanban 5 cột Intake - RFQ - Quotes - Review - PO</li>
+                <li>Trình Wizard tiến độ chi tiết 8 bước nghiệp vụ</li>
+                <li>Quản lý hồ sơ chất lượng nhà cung cấp đối tác</li>
+              </ul>
+            </div>
+            <div class="audience-pane-visual">
+              <div class="role-badge-visual">
+                <div class="role-avatar">🛍️</div>
+                <span style="font-weight:600;">Procurement Workspace</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pane 2 -->
+          <div class="audience-pane" id="pane-chef">
+            <div class="audience-pane-content">
+              <span class="audience-tag">Requester</span>
+              <h3>Yêu cầu vật tư & nguyên liệu siêu tốc</h3>
+              <p>Nhân sự ở các bộ phận có thể nhanh chóng tạo phiếu yêu cầu bổ sung nguyên vật liệu, vật tư thiết bị trực tiếp trên điện thoại mà không bị rối thông tin giá.</p>
+              <ul class="audience-list">
+                <li>Form nhập liệu tự động gợi ý danh mục vật tư thông minh</li>
+                <li>Cảnh báo tồn kho hoặc thiếu hụt dưới ngưỡng an toàn</li>
+                <li>Trình theo dõi tiến độ Purchase Request 5 bước ẩn giá</li>
+              </ul>
+            </div>
+            <div class="audience-pane-visual">
+              <div class="role-badge-visual">
+                <div class="role-avatar">📝</div>
+                <span style="font-weight:600;">Requester Workspace</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pane 3 -->
+          <div class="audience-pane" id="pane-warehouse">
+            <div class="audience-pane-content">
+              <span class="audience-tag">Warehouse Management</span>
+              <h3>Nhận hàng vật lý & Đối soát hao hụt</h3>
+              <p>Hỗ trợ thủ kho tiếp nhận thực phẩm tại điểm giao nhận, ghi nhận nhanh thất thoát để trừ tiền thanh toán nhà cung cấp.</p>
+              <ul class="audience-list">
+                <li>Thẻ theo dõi xe hàng đến kho phân màu khẩn cấp</li>
+                <li>Xác nhận nhanh khớp đơn 1-tap nếu đủ 100% hàng</li>
+                <li>Bộ điều chỉnh hao hụt thực tế kèm nhãn "Hàng lỗi"</li>
+              </ul>
+            </div>
+            <div class="audience-pane-visual">
+              <div class="role-badge-visual">
+                <div class="role-avatar">📦</div>
+                <span style="font-weight:600;">Warehouse Workspace</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pane 4 -->
+          <div class="audience-pane" id="pane-ceo">
+            <div class="audience-pane-content">
+              <span class="audience-tag">Manager / Owner</span>
+              <h3>Duyệt chi & Kiểm soát dòng tiền PO</h3>
+              <p>Giám đốc doanh nghiệp nắm bức tranh tài chính tổng quát và duyệt chi các đơn hàng giá trị cao từ xa chỉ với vài lượt chạm.</p>
+              <ul class="audience-list">
+                <li>Biểu đồ chi tiêu SVG động phân tích xu hướng chi phí</li>
+                <li>Hàng chờ duyệt PO thông minh hiển thị 3 chỉ số vàng</li>
+                <li>Trình đối chiếu đa chiều so sánh chiết khấu NCC và email</li>
+              </ul>
+            </div>
+            <div class="audience-pane-visual">
+              <div class="role-badge-visual">
+                <div class="role-avatar">📈</div>
+                <span style="font-weight:600;">CEO Approval Workspace</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="cach-hoat-dong">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Quy trình hoạt động mượt mà</h2>
+        <p>Quy trình các bước khép kín giúp chuẩn hóa mọi khâu vận hành thu mua nguyên vật liệu.</p>
+      </div>
+
+      <div class="stepper-container reveal">
+        <div class="stepper-line"></div>
+        
+        <!-- Step 1 -->
+        <div class="stepper-item active">
+          <div class="stepper-badge">1</div>
+          <div class="stepper-content">
+            <h3>Bộ phận tạo yêu cầu (PR)</h3>
+            <p>Các bộ phận (như bếp, kho, văn phòng...) gửi yêu cầu bổ sung nguyên vật liệu hoặc vật tư từ giao diện của họ.</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="stepper-item active">
+          <div class="stepper-badge">2</div>
+          <div class="stepper-content">
+            <h3>Phòng thu mua duyệt Intake</h3>
+            <p>Nhân viên mua sắm nhận phiếu PR và phân loại nhà cung cấp phù hợp trong cột Kanban Intake.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="stepper-item active">
+          <div class="stepper-badge">3</div>
+          <div class="stepper-content">
+            <h3>Yêu cầu báo giá từ NCC</h3>
+            <p>Stally tự động gửi RFQ tới nhà cung cấp. Báo cáo phản hồi được trích xuất bằng AI tự động.</p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="stepper-item">
+          <div class="stepper-badge">4</div>
+          <div class="stepper-content">
+            <h3>So sánh nhà cung cấp</h3>
+            <p>Bảng đối sánh giá và điều khoản chiết khấu tự động hiển thị để lọc ra đối tác tốt nhất.</p>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="stepper-item">
+          <div class="stepper-badge">5</div>
+          <div class="stepper-content">
+            <h3>CEO xem xét phê duyệt PO</h3>
+            <p>Với các đơn hàng lớn, CEO xem nhanh 3 chỉ số vàng và tiến hành ký duyệt PO online tức thời.</p>
+          </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="stepper-item">
+          <div class="stepper-badge">6</div>
+          <div class="stepper-content">
+            <h3>Thủ kho nhận hàng & Đối soát</h3>
+            <p>Khi hàng hóa đến doanh nghiệp, thủ kho kiểm kê vật lý và ghi nhận hao hụt thực tế lên hệ thống.</p>
+          </div>
+        </div>
+
+        <!-- Step 7 -->
+        <div class="stepper-item">
+          <div class="stepper-badge">7</div>
+          <div class="stepper-content">
+            <h3>Kế toán chốt hóa đơn</h3>
+            <p>Dữ liệu giao nhận thực tế đồng bộ về kế toán để đối chiếu công nợ và hoàn tất thanh toán.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Spotlight Section -->
+  <section class="ai-section bg-alt">
+    <div class="container ai-grid">
+      <div class="hero-content reveal">
+        <span class="hero-badge" style="background-color:rgba(245,158,11,0.1); color:var(--accent-hover);">Trợ lý AI Độc Quyền</span>
+        <h2>AI hỗ trợ - Con người quyết định (Draft & Confirm)</h2>
+        <p>Trợ lý ảo Stally AI đồng hành cùng đội ngũ để tự động hóa các tác vụ nhập liệu, đọc báo cáo tẻ nhạt, nhưng quyền duyệt chi và quyết định cuối cùng luôn thuộc về nhân sự của bạn.</p>
+        <ul class="audience-list" style="margin-top: 1rem;">
+          <li><strong>Bảo mật cấp doanh nghiệp:</strong> Đảm bảo cách ly dữ liệu đa chi nhánh (Isolated Multi-Tenant) tuyệt đối an toàn.</li>
+          <li><strong>AI Draft-and-Confirm:</strong> AI đề xuất các biểu mẫu PR, PO sẵn, con người chỉ cần duyệt.</li>
+          <li><strong>Tra cứu FAQs nội bộ:</strong> Tìm kiếm nhanh hướng dẫn vận hành, danh bạ nhà cung cấp đối tác.</li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <div class="glass-chat-widget">
+          <div class="glass-chat-header">
+            <div class="glass-chat-agent">
+              <div class="glass-chat-avatar">AI</div>
+              <div>
+                <div class="glass-chat-title">Stally Assistant</div>
+                <div class="glass-chat-status">
+                  <span class="status-dot"></span> Trực tuyến
+                </div>
+              </div>
+            </div>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
+          </div>
+          <div class="glass-chat-body">
+            <img src="assets/stally_chatbot_3d_promo.png" alt="Trợ lý ảo AI Stally Chatbot">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Demo Section -->
+  <section id="demo">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Trải nghiệm Stally trực quan</h2>
+        <p>Thử nghiệm tính năng trích xuất báo giá tự động bằng cách tải file báo giá giả lập dưới đây.</p>
+      </div>
+
+      <div class="demo-box reveal">
+        <div class="demo-tabs">
+          <button class="demo-tab-btn active" data-pane="upload">Tải Báo Giá</button>
+          <button class="demo-tab-btn" data-pane="compare">Bảng So Sánh</button>
+        </div>
+
+        <!-- Pane: Upload Area -->
+        <div class="demo-pane active" id="pane-demo-upload">
+          <div class="demo-ui-box" id="upload-area" style="border: 2px dashed var(--border-medium); padding: 3rem; text-align: center; cursor: pointer; border-radius: var(--radius-md); background-color: var(--bg-primary); transition: border-color 0.2s ease;">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin: 0 auto 1rem auto; color: var(--text-muted);">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="17 8 12 3 7 8"/>
+              <line x1="12" y1="3" x2="12" y2="15"/>
+            </svg>
+            <p style="font-weight:600; margin-bottom:0.25rem;">Thả file báo giá của bạn vào đây</p>
+            <p style="font-size:0.875rem; color:var(--text-muted);">Hỗ trợ định dạng PDF, Excel, Word hoặc Email</p>
+            <input type="file" id="demo-file-picker" style="display: none;" accept=".pdf,.xlsx,.xls,.doc,.docx,.txt">
+          </div>
+
+          <!-- Extraction result table -->
+          <div class="demo-ui-box" id="extraction-result" style="display: none; border-color: rgba(34, 197, 94, 0.2);">
+            <h4 style="margin-bottom: 1rem; color: var(--text-primary); font-weight:700;">Kết quả phân tích bằng AI:</h4>
+            <div class="demo-table-wrapper">
+              <table class="demo-table">
+                <tr>
+                  <th>Chỉ số trích xuất</th>
+                  <th>Giá trị trích xuất</th>
+                </tr>
+                <tr>
+                  <td>Tên nhà cung cấp</td>
+                  <td id="mock-vendor-name" style="font-weight: 600;">-</td>
+                </tr>
+                <tr>
+                  <td>Tổng giá trị đơn hàng</td>
+                  <td id="mock-total-price" style="font-weight: 600; color: var(--accent-hover);">-</td>
+                </tr>
+                <tr>
+                  <td>Thời gian giao nhận dự kiến</td>
+                  <td id="mock-delivery-time">-</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pane: Compare Table -->
+        <div class="demo-pane" id="pane-demo-compare">
+          <div class="demo-ui-box">
+            <h4 style="margin-bottom: 1rem; font-weight: 700;">Bảng đối chiếu nhà cung cấp cạnh nhau</h4>
+            <div class="demo-table-wrapper">
+              <table class="demo-table">
+                <thead>
+                  <tr>
+                    <th>Hạng mục so sánh</th>
+                    <th>Nhà cung cấp ABC</th>
+                    <th class="demo-highlight">Vật tư Toàn Cầu (Đề xuất)</th>
+                    <th>TechPro Solutions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Đơn giá tổng</strong></td>
+                    <td>1.048.000.000 ₫</td>
+                    <td class="demo-highlight">998.000.000 ₫</td>
+                    <td>1.132.000.000 ₫</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Thời gian giao</strong></td>
+                    <td>14-21 ngày</td>
+                    <td class="demo-highlight">7-10 ngày</td>
+                    <td>14-14 ngày</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Độ tin cậy NCC</strong></td>
+                    <td>85%</td>
+                    <td class="demo-highlight">94%</td>
+                    <td>90%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="bang-gia" class="bg-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Bảng giá minh bạch</h2>
+        <p>Lựa chọn gói dịch vụ phù hợp với quy mô doanh nghiệp của bạn. Dùng thử 14 ngày không cần thẻ.</p>
+      </div>
+
+      <div class="pricing-grid reveal">
+        <!-- Tier 1 -->
+        <div class="price-card">
+          <h3>Gói Cơ Bản</h3>
+          <p class="price-desc">Gói cơ bản dành cho doanh nghiệp nhỏ</p>
+          <div class="price-val">Miễn Phí <span>/ 14 ngày thử</span></div>
+          <a href="#lien-he" class="btn btn-secondary price-btn">Dùng Thử Ngay</a>
+          <ul class="price-features">
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Tối đa 30 báo giá / tháng</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> So sánh tối đa 3 nhà cung cấp</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Tạo RFQ cơ bản</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Hỗ trợ qua email</li>
+          </ul>
+        </div>
+
+        <!-- Tier 2 -->
+        <div class="price-card popular">
+          <span class="price-badge">Phổ Biến Nhất</span>
+          <h3>Gói Chuyên Nghiệp</h3>
+          <p class="price-desc">Gói chuyên nghiệp dành cho doanh nghiệp nhỏ và vừa, có khoảng 5 chi nhánh</p>
+          <div class="price-val">Liên Hệ <span>/ tháng</span></div>
+          <a href="#lien-he" class="btn btn-primary price-btn">Đăng Ký Tư Vấn</a>
+          <ul class="price-features">
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Trích xuất báo giá không giới hạn</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> So sánh tối đa 10 nhà cung cấp</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Tạo RFQ & Đề xuất mua hàng</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Trợ lý đàm phán AI</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Xuất PDF, Excel, Word</li>
+          </ul>
+        </div>
+
+        <!-- Tier 3 -->
+        <div class="price-card">
+          <h3>Doanh Nghiệp</h3>
+          <p class="price-desc">Chuỗi quy mô lớn, tích hợp hệ thống nội bộ</p>
+          <div class="price-val">Tùy Chỉnh <span>/ thiết lập riêng</span></div>
+          <a href="#lien-he" class="btn btn-secondary price-btn">Liên Hệ Tư Vấn</a>
+          <ul class="price-features">
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Tất cả tính năng của gói Pro</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Không giới hạn người dùng</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Tích hợp ERP / Hệ thống kế toán</li>
+            <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Quản lý tài khoản riêng (Onboarding)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Early Access Form -->
+  <section id="lien-he" class="footer-cta">
+    <div class="container cta-grid">
+      <div class="cta-content reveal">
+        <h2>Tham gia chương trình Early Access</h2>
+        <p>Đăng ký ngay hôm nay để nhận thông báo dùng thử phiên bản giới hạn dành cho các doanh nghiệp B2B.</p>
+        <ul class="cta-benefits">
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Hỗ trợ cấu hình hệ thống ban đầu miễn phí
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Đặc quyền tính năng độc quyền sớm nhất
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Giá ưu đãi Beta đặc biệt trọn đời
+          </li>
+        </ul>
+      </div>
+      <div class="cta-form-box reveal">
+        <form id="early-access-form">
+          <div class="form-group">
+            <label for="register-name" class="form-label">Họ và tên</label>
+            <input type="text" id="register-name" class="form-control" placeholder="Nguyễn Văn A" required>
+          </div>
+          <div class="form-group">
+            <label for="register-phone" class="form-label">Số điện thoại</label>
+            <input type="tel" id="register-phone" class="form-control" placeholder="0941 205 852" required>
+          </div>
+          <div class="form-group">
+            <label for="register-business" class="form-label">Tên doanh nghiệp</label>
+            <input type="text" id="register-business" class="form-control" placeholder="Stally" required>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Đăng Ký Early Access</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Credits -->
+  <footer class="footer-credits">
+    <div class="container">
+      <p>&copy; 2026 Stally. Mọi quyền được bảo lưu.</p>
+      <p>Hotline / Zalo hỗ trợ: <a href="tel:+84941205852" style="font-weight:600; color:var(--text-primary);">+84 941 205 852</a></p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Slide-in -->
+  <div class="toast-msg" id="toast-msg">
+    Đăng ký thành công! Stally sẽ liên hệ tư vấn bạn sớm nhất.
+  </div>
+
+  <!-- JavaScript Behavior -->
+  <script src="main.js"></script>
+</body>
+</html>
