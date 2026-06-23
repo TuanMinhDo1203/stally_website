@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Stally Website - Preview</title>
+    <title>Stally</title>
     <style>
       html,
       body {
@@ -48,7 +48,7 @@
         const targetForWebsite = (text) => {
           if (text.includes("trang chu") || text === "stally") return "home";
           if (text.includes("ve stally") || text.includes("stally lam gi")) return "about";
-          if (text.includes("san pham") || text.includes("procurs") || text.includes("bang gia")) return "products";
+          if (text.includes("san pham") || text.includes("bang gia")) return "products";
           if (text.includes("demo") || text.includes("lien he") || text.includes("tu van")) return "contact";
           return "";
         };
@@ -99,6 +99,14 @@
 
               const text = clickText(clickable);
               const inNavOrFooter = Boolean(clickable.closest("nav, footer"));
+
+              if (SITE === "website" && text.includes("procurs")) {
+                event.preventDefault();
+                event.stopPropagation();
+                window.location.href = "/procurS";
+                return;
+              }
+
               const target = targetFromText(text);
 
               if (shouldCall(text, inNavOrFooter)) {
